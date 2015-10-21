@@ -15,14 +15,47 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        System.out.println("Main Activity onCreate");
+
         findViewById(R.id.buttonAnotherActivity).setOnClickListener(new View.OnClickListener(
         ) {
             @Override
             public void onClick(View v) {
 //                startActivity(new Intent(MainActivity.this,SecondActivity.class));
-                  startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.baidu.com")));
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.baidu.com")));
             }
         });
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        System.out.print("Main Activity onStart");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        System.out.println("Main Activity onResume");
+    }
+
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        System.out.println("Main Activity onPause");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        System.out.println("Main Activity onStop");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        System.out.println("Main Activity onDestroy");
     }
 
     @Override
