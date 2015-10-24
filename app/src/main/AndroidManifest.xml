@@ -10,11 +10,6 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".SecondActivity"
@@ -23,6 +18,42 @@
         <activity
             android:name=".ParamActivity"
             android:label="@string/title_activity_param" >
+        </activity>
+        <activity
+            android:name=".LanuchModel"
+            android:label="@string/title_activity_lanuch_model"
+            android:launchMode="standard" >
+        </activity>
+        <activity android:name=".FirstIntentActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SecondIntent"
+            android:label="@string/title_activity_second_intent" >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="mySecondActivity" />
+
+                <data android:scheme="app" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".BrowserActivity"
+            android:label="@string/title_activity_browser" >
+
+            <intent-filter>
+                <category android:name="android.intent.category.APP_BROWSER"></category>
+                <category android:name="android.intent.category.DEFAULT"></category>
+                <action android:name="android.intent.action.VIEW"></action>
+                <data android:scheme="app"></data>
+            </intent-filter>
         </activity>
     </application>
 
