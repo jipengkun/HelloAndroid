@@ -21,4 +21,32 @@
         android:text="启动另一个Activity"
         />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/startActivity"
+        android:text="参数传递"
+        android:layout_below="@+id/buttonAnotherActivity"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="63dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bundleparam"
+        android:text="Bundle参数传递"
+        android:layout_below="@+id/textView2"
+        android:layout_alignRight="@+id/buttonAnotherActivity"
+        android:layout_alignEnd="@+id/buttonAnotherActivity"
+        android:layout_marginTop="63dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="nickname"
+        android:id="@+id/nickNameTextView"
+        android:layout_below="@+id/startActivity"
+        android:layout_alignRight="@+id/startActivity"
+        android:layout_alignEnd="@+id/startActivity"
+        android:layout_marginTop="31dp" />
 </RelativeLayout>

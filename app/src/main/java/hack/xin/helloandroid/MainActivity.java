@@ -7,10 +7,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    @Override
+    /*@Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -21,10 +22,64 @@ public class MainActivity extends AppCompatActivity {
         ) {
             @Override
             public void onClick(View v) {
-//                startActivity(new Intent(MainActivity.this,SecondActivity.class));
+                startActivity(new Intent(MainActivity.this,SecondActivity.class));
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.baidu.com")));
             }
         });
+
+
+        //Intent传递参数
+        findViewById(R.id.startActivity).setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this,ParamActivity.class);
+                i.putExtra("data","Hack Team");
+
+                startActivity(i);
+            }
+        });
+
+
+    }*/
+
+    /**
+     * 通过buddle传递参数
+     * @param savedInstanceState
+     */
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        System.out.println("MainActivity onCreate");
+
+        findViewById(R.id.bundleparam).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this,ParamActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putString("username", "hack");
+                bundle.putString("password", "xin");
+
+                i.putExtras(bundle);
+                //startActivity(i);
+                startActivityForResult(i,2000);
+            }
+        });
+    }
+
+    /**
+     * 获取Activity返回值
+     * @param requestCode
+     * @param resultCode
+     * @param data
+     */
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        TextView nickname = (TextView) findViewById(R.id.nickNameTextView);
+        nickname.setText(data.getStringExtra("nickname"));
     }
 
     @Override
