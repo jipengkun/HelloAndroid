@@ -8,4 +8,9 @@
     <string name="title_activity_lanuch_model">LanuchModel</string>
     <string name="title_activity_second_intent">SecondIntent</string>
     <string name="title_activity_browser">BrowserActivity</string>
+    <string name="title_activity_service">ServiceActivity</string>
+    <string name="title_activity_hack_service">HackService</string>
+    <string name="title_activity_hack">HackActivity</string>
+    <string name="title_activity_android_log">AndroidLog</string>
+    <string name="title_activity_linear_layout">LinearLayout</string>
 </resources>
