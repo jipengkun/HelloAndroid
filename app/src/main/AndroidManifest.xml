@@ -78,14 +78,21 @@
             android:name="hack.xin.service.AndroidLog"
             android:label="@string/title_activity_android_log" >
         </activity>
-
         <activity
             android:name="hack.xin.layout.LinearLayout"
             android:label="@string/title_activity_linear_layout" >
-            <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+        </activity>
+        <activity
+            android:name="hack.xin.view.ViewActivity"
+            android:label="@string/title_activity_view" >
+        </activity>
 
-            <category android:name="android.intent.category.LAUNCHER" />
+        <activity
+            android:name="hack.xin.firstcode.FirstActivity"
+            android:label="This is FirstActivtiy">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
     </application>

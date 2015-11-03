@@ -13,4 +13,7 @@
     <string name="title_activity_hack">HackActivity</string>
     <string name="title_activity_android_log">AndroidLog</string>
     <string name="title_activity_linear_layout">LinearLayout</string>
+    <string name="title_activity_custom_view">CustomView</string>
+    <string name="title_activity_view">ViewActivity</string>
+    <string name="title_activity_code">CodeActivity</string>
 </resources>

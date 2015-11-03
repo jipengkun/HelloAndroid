@@ -6,8 +6,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import hack.xin.helloandroid.R;
+import hack.xin.view.CodeActivity;
 
 public class LinearLayout extends AppCompatActivity {
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
